@@ -5,6 +5,7 @@ import productsRoutes from "./src/routes/products.js";
 // Creo una constante que es igual a la libreria que
 // acabo de importar y lo ejecuto
 const app = express();
+
 // middleware para aceptar datos desde postman
 app.use(express.json());
 
