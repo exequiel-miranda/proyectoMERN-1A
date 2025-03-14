@@ -1,7 +1,8 @@
 import express from "express";
-
-const router = express.Router();
 import productsController from "../controllers/productsController.js";
+// Router() nos ayuda a colocar los metodos
+// que tendra mi ruta
+const router = express.Router();
 
 router
   .route("/")
@@ -10,7 +11,6 @@ router
 
 router
   .route("/:id")
-  .get(productsController.getProduct)
   .put(productsController.updateProducts)
   .delete(productsController.deleteProducts);
 

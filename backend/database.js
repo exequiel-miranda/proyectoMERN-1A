@@ -1,26 +1,27 @@
 import mongoose from "mongoose";
 
-//1- Configurar la URI de la base de datos
-const URI = "mongodb://localhost:27017/ferreteriaEPA";
+// 1- Configuro la URI o dirección de la base de datos
+const URI = "mongodb://localhost:27017/FerreteriaEPADB20170508";
 
-//2- Conecto la base de datos
+// 2- Conecto la base de datos
 mongoose.connect(URI);
 
-// -------- Comprobar que todo funciona ----------
+// ------ Comprobar que todo funciona ------
 
+// 3- Creo una constante que es igual a la conexión
 const connection = mongoose.connection;
 
-//veo si funciona
+// Veo si funciona
 connection.once("open", () => {
   console.log("DB is connected");
 });
 
-//veo si se desconectó
+// Veo si se desconectó
 connection.on("disconnected", () => {
   console.log("DB is disconnected");
 });
 
-//veo si hay un error
-connection.on("error", () => {
-  console.log("Error en la conexión");
+// Veo si hay un error
+connection.on("error", (error) => {
+  console.log("error found" + error);
 });
