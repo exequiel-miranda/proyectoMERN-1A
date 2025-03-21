@@ -8,7 +8,7 @@ import reviewRoutes from "./src/routes/reviews.js";
 
 // Creo una constante que es igual a la libreria que importé
 const app = express();
-
+//s
 //Que acepte datos en json
 app.use(express.json());
 
