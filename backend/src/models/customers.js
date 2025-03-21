@@ -26,29 +26,26 @@ const customersSchema = new Schema(
     },
 
     email: {
-        type: String,
-      },
+      type: String,
+    },
 
     password: {
       type: Number,
       require: true,
-      min: 8,
     },
 
     telephone: {
-        type: Number,
-        require: true,
-        min: 8,
-      },
+      type: Number,
+      require: true,
+    },
 
-      dui: {
-        type: Number,
-        require: true,
-        min: 9,
-      },
-      isVerified: {
-        type: Boolean,
-      },
+    dui: {
+      type: Number,
+      require: true,
+    },
+    isVerified: {
+      type: Boolean,
+    },
   },
   {
     timestamps: true,
