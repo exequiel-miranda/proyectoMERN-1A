@@ -26,41 +26,37 @@ const employeeSchema = new Schema(
     },
 
     email: {
-        type: String,
-      },
+      type: String,
+    },
 
-      address: {
-        type: String,
-      },
+    address: {
+      type: String,
+    },
 
     password: {
-      type: Number,
+      type: String,
       require: true,
-      min: 8,
     },
     hireDate: {
-        type: String,
-      },
+      type: String,
+    },
 
     telephone: {
-        type: Number,
-        require: true,
-        min: 8,
-      },
+      type: String,
+      require: true,
+    },
 
-      dui: {
-        type: Number,
-        require: true,
-        min: 9,
-      },
-      isVerified: {
-        type: Boolean,
-      },
-      issnumber: {
-        type: Number,
-        require: true,
-        min: 8,
-      },
+    dui: {
+      type: String,
+      require: true,
+    },
+    isVerified: {
+      type: Boolean,
+    },
+    issnumber: {
+      type: String,
+      require: true,
+    },
   },
   {
     timestamps: true,
