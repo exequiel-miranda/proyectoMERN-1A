@@ -31,7 +31,25 @@ registerEmployeeController.register = async (req, res) => {
     }
 
     // Encriptar la contraseña
-    const passwordHash = await bcryptjs.hash(password, 10)
+    const passwordHash = await bcryptjs.hash(password, 10);
+
+    // Guardamos el empleado en la base de datos
+    const newEmployee = new employeeModel({
+      name,
+      lastName,
+      email,
+      address,
+      password: passwordHash,
+      hireDate,
+      telephone,
+      dui,
+      isVerified,
+      issnumber,
+    });
+
+    await newEmployee.save();
+
+    
 
   } catch (error) {}
 };
