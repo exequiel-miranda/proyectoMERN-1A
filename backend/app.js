@@ -19,5 +19,7 @@ app.use("/api/employee", employeeRoutes);
 app.use("/api/branches", branchesRoutes);
 app.use("/api/reviews", reviewRoutes);
 
+app.use("/api/registerEmployee")
+
 // Exporto la constante para poder usar express en otros archivos
 export default app;
