@@ -65,6 +65,7 @@ registerEmployeeController.register = async (req, res) => {
         res.json({ message: "Employee registed" });
       }
     );
+    
   } catch (error) {
     console.log("error" + error);
     res.json({ message: "Error" });
