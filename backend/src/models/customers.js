@@ -22,7 +22,6 @@ const customersSchema = new Schema(
     birthday: {
       type: Date,
       require: true,
-      min: 0,
     },
 
     email: {
@@ -30,17 +29,17 @@ const customersSchema = new Schema(
     },
 
     password: {
-      type: Number,
+      type: String,
       require: true,
     },
 
     telephone: {
-      type: Number,
+      type: String,
       require: true,
     },
 
     dui: {
-      type: Number,
+      type: String,
       require: true,
     },
     isVerified: {

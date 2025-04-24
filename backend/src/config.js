@@ -12,10 +12,14 @@ export const config = {
   },
   JWT: {
     secret: process.env.JWT_SECRET,
-    expires: process.env.JWT_EXPIRES
+    expires: process.env.JWT_EXPIRES,
   },
   admin: {
     email: process.env.ADMIN_EMAIL,
-    password: process.env.ADMIN_PASSWORD
-  }
+    password: process.env.ADMIN_PASSWORD,
+  },
+  emailUser: {
+    user_email: process.env.USER_EMAIL,
+    user_pass: process.env.USER_PASS,
+  },
 };
