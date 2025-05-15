@@ -1,6 +1,7 @@
 //Array de metodos (C R U D)
 const customersController = {};
 import customersModel from "../models/customers.js";
+import productsModel from "../models/Products.js"
 
 // SELECT
 customersController.getcustomers = async (req, res) => {
@@ -13,6 +14,13 @@ customersController.createcustomers = async (req, res) => {
   const { name, lastName, birthday, email, password, telephone, dui } = req.body;
   const newcustomers = new customersModel({ name, lastName, birthday, email, password, telephone, dui});
   await newcustomers.save();
+
+
+  const newProduct = new productsModel({name, price})
+  newProduct.save()
+
+
+
   res.json({ message: "customer save" });
 };
 

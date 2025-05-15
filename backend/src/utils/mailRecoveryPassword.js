@@ -30,7 +30,7 @@ const sendEmail = async (to, subject, text, html) => {
 };
 
 // Función para generar el HTML del correo de recuperación de contraseña
-const HTMLRecoveryEmail = (code) => {
+const HTMLRecoveryEmail = (message, horario, numProject) => {
   return `
       <div style="font-family: Arial, sans-serif; text-align: center; background-color: #f4f4f9; padding: 20px; border: 1px solid #ddd; border-radius: 10px; max-width: 600px; margin: 0 auto;">
         <h1 style="color: #2c3e50; font-size: 24px; margin-bottom: 20px;">Password Recovery</h1>
@@ -38,7 +38,7 @@ const HTMLRecoveryEmail = (code) => {
           Hello, we received a request to reset your password. Use the verification code below to proceed:
         </p>
         <div style="display: inline-block; padding: 10px 20px; margin: 20px 0; font-size: 18px; font-weight: bold; color: #fff; background-color: #ff7f50; border-radius: 5px; border: 1px solid #e67e22;">
-          ${code}
+          ${code}, Asunto: ${message} el numero de pryecto a ${numProject}
         </div>
         <p style="font-size: 14px; color: #777; line-height: 1.5;">
           This code is valid for the next <strong>15 minutes</strong>. If you didn’t request this email, you can safely ignore it.
