@@ -12,6 +12,10 @@ import logoutRoute from "./src/routes/logout.js";
 import registerClientsRouter from "./src/routes/registerClients.js";
 import recoveryPasswordRoutes from "./src/routes/recoveryPassword.js";
 import providersRoutes from "./src/routes/providers.js";
+<<<<<<< HEAD
+=======
+import brandRoutes from "./src/routes/brand.js";
+>>>>>>> 3e75aa799daf6852c3bc6e41920953c2fcaa608a
 
 // Creo una constante que es igual a la libreria que importé
 const app = express();
