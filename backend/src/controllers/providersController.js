@@ -27,7 +27,9 @@ providersController.insertProviders = async (req, res) => {
 
   //Subir la imagen a Cloudinary
   if (req.file) {
-    const result = await cloudinary.uploader.upload(req.file.path, {
+    const result = await cloudinary.uploader.upload(
+      req.file.path, 
+      {
       folder: "public",
       allowed_formats: ["jpg", "png", "jpeg"],
     });
