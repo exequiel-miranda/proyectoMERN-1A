@@ -23,7 +23,7 @@ providersController.getAllProviders = async (req, res) => {
 //INSERT
 providersController.insertProviders = async (req, res) => {
   const { name, telephone } = req.body;
-  let imageURL = "";
+  let imageURL = {};
 
   //Subir la imagen a Cloudinary
   if (req.file) {
@@ -31,7 +31,7 @@ providersController.insertProviders = async (req, res) => {
       req.file.path, 
       {
       folder: "public",
-      allowed_formats: ["jpg", "png", "jpeg"],
+      allowed_formats: ["PDF", "png", "jpeg"],
     });
     imageURL = result.secure_url;
   }

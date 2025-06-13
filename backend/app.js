@@ -15,13 +15,25 @@ import providersRoutes from "./src/routes/providers.js";
 import { validateAuthToken } from "./src/middlewares/validateAuthToken.js";
 import faqsRoutes from "./src/routes/faqs.js";
 
+import swaggerUi from "swagger-ui-express";
+import fs from "fs";
+import path from "path";
+
 // Creo una constante que es igual a la libreria que importé
 const app = express();
-//s
+
 //Que acepte datos en json
 app.use(express.json());
 // Para que postman guarde el token en una cookie
 app.use(cookieParser());
+
+//Traemos el archivo json
+const swaggerDocument = JSON.parse(
+  fs.readFileSync(path.resolve("./docEPAv2.json"), "utf-8")
+);
+
+//Mostramos el archivo al ingresar a /api/docs
+app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Definir las rutas de las funciones que tendrá la página web
 app.use("/api/products", productsRoutes);
