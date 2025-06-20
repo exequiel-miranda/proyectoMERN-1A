@@ -4,7 +4,7 @@ import employeeModel from "../models/employee.js";
 
 // SELECT
 employeeController.getemployee = async (req, res) => {
-  const employee = await employeeModel.find();
+  const employee = await employeeModel.find({});
   res.json(employee);
 };
 

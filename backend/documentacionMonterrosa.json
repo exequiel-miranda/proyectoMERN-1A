@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "Documentación para API de Ferreteria EPA",
-    "description": "Hola! esta es mi API para Ferreteria EPA",
+    "title": "Hola, esta es mi API para Zona Digital",
+    "description": "Some desc",
     "contact": {
       "email": "you@your-company.com"
     },
@@ -11,10 +11,10 @@
       "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
     },
     "version": "1.0.0"
-  },  
+  },
   "servers": [
     {
-      "url": "https://virtserver.swaggerhub.com/exequielmirandarodrg/FerreteriaEPAMERN/1.0.0",
+      "url": "https://virtserver.swaggerhub.com/ricaldone-944/ZonaDigitalMERN2/1.0.0",
       "description": "SwaggerHub API Auto Mocking"
     }
   ],
@@ -22,10 +22,10 @@
     "/api/products": {
       "get": {
         "tags": [
-          "Product"
+          "Products"
         ],
-        "summary": "Select a products",
-        "description": "Al utilizar este método devuelve todos los datos de la colección Products",
+        "summary": "select a product",
+        "description": "asdfasdfjasdk fkljsd;f asjd;flkjasdfjasd",
         "operationId": "get-api-products",
         "responses": {
           "200": {
@@ -38,10 +38,10 @@
       },
       "put": {
         "tags": [
-          "Product"
+          "Products"
         ],
-        "summary": "Update a product",
-        "description": "Al utilizar este método actualizamos un producto",
+        "summary": "Your PUT endpoint",
+        "description": "hgjhg",
         "operationId": "put-api-products",
         "parameters": [
           {
@@ -73,10 +73,10 @@
       },
       "post": {
         "tags": [
-          "Product"
+          "Products"
         ],
-        "summary": "Insert a product",
-        "description": "Al utilizar este método agregamos un producto nuevo",
+        "summary": "insert a product",
+        "description": "asdfasdf asdf asdf asdf asdfasdfasdf ",
         "operationId": "post-api-products",
         "requestBody": {
           "content": {
@@ -98,10 +98,10 @@
       },
       "delete": {
         "tags": [
-          "Product"
+          "Products"
         ],
-        "summary": "Delete a product",
-        "description": "Utilizando este método eliminamos un producto",
+        "summary": "Your DELETE endpoint",
+        "description": "jhg",
         "operationId": "delete-api-products",
         "parameters": [
           {
@@ -122,6 +122,23 @@
           }
         }
       }
+    },
+    "/api/customer": {
+      "get": {
+        "tags": [
+          "Customer"
+        ],
+        "summary": "Your GET endpoint",
+        "operationId": "get-api-customer",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -132,29 +149,25 @@
           "name": {
             "type": "string",
             "x-stoplight": {
-              "id": "fxu8bgsdb8tqf"
+              "id": "qrlzvttq5jzgd"
             }
           },
           "description": {
             "type": "string",
             "x-stoplight": {
-              "id": "nl2wfang9w8sp"
+              "id": "hatyah7oqp03h"
             }
           },
           "price": {
-            "maximum": 500,
-            "minimum": 1,
             "type": "number",
             "x-stoplight": {
-              "id": "lnfz1odyafqdw"
+              "id": "704d6e57dlf84"
             }
           },
           "stock": {
-            "maximum": 500,
-            "minimum": 1,
             "type": "number",
             "x-stoplight": {
-              "id": "pxxpvbwcqmetp"
+              "id": "g625evxor4kmo"
             }
           }
         }
@@ -165,29 +178,25 @@
           "name": {
             "type": "string",
             "x-stoplight": {
-              "id": "ycwjb00eyj6dt"
+              "id": "6pm69bmvkeo41"
             }
           },
           "description": {
             "type": "string",
             "x-stoplight": {
-              "id": "g5nh2va7r8n96"
+              "id": "r52ukrmm32fsp"
             }
           },
           "price": {
-            "maximum": 500,
-            "minimum": 0.01,
             "type": "number",
             "x-stoplight": {
-              "id": "1canqmnr5doip"
+              "id": "35zdf0u1l8g9q"
             }
           },
           "stock": {
-            "maximum": 500,
-            "minimum": 1,
             "type": "number",
             "x-stoplight": {
-              "id": "uekpp0py8g952"
+              "id": "ihh3m86s7ve7q"
             }
           }
         }

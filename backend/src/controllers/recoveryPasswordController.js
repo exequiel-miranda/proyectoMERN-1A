@@ -135,6 +135,8 @@ recoveryPasswordController.newPassword = async (req, res) => {
         { password: hashedPassword },
         { new: true }
       );
+
+      console.log("esta es la contraseña que se guarda"+hashedPassword)
     }
 
     //Eliminar el token

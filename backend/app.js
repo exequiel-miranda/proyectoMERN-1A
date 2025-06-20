@@ -19,6 +19,8 @@ import swaggerUi from "swagger-ui-express";
 import fs from "fs";
 import path from "path";
 
+import salesRoutes from "./src/routes/sales.js";
+
 // Creo una constante que es igual a la libreria que importé
 const app = express();
 
@@ -29,13 +31,12 @@ app.use(cookieParser());
 
 //Traemos el archivo json
 const swaggerDocument = JSON.parse(
-  fs.readFileSync(path.resolve("./docEPAv2.json"), "utf-8")
+  fs.readFileSync(path.resolve("./documentacionMonterrosa.json"), "utf-8")
 );
 
 //Mostramos el archivo al ingresar a /api/docs
 app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-// Definir las rutas de las funciones que tendrá la página web
 app.use("/api/products", productsRoutes);
 app.use("/api/customers", customersRoutes);
 app.use("/api/employee", employeeRoutes);
@@ -47,12 +48,11 @@ app.use("/api/login", loginRoute);
 app.use("/api/logout", logoutRoute);
 
 app.use("/api/registerClients", registerClientsRouter);
-
 app.use("/api/RecoveryPassword", recoveryPasswordRoutes);
 
 app.use("/api/providers", providersRoutes);
-
 app.use("/api/faqs", faqsRoutes);
 
+app.use("/api/sales", salesRoutes);
 // Exporto la constante para poder usar express en otros archivos
 export default app;
