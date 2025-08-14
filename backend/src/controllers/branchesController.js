@@ -8,6 +8,14 @@ branchesController.getbranches = async (req, res) => {
   res.json(branches);
 };
 
+// SELECT BY ID
+branchesController.getbranchesById = async (req, res) => {
+  const branches = await branchesModel.findById(req.params.id);
+  res.json(branches);
+};
+
+
+
 // INSERT
 branchesController.createbranches = async (req, res) => {
   const { name, lastName, birthday, email, password, telephone, dui } = req.body;

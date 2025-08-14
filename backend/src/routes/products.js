@@ -10,7 +10,7 @@ router
   .post(productsController.createProducts);
 
 router
-  .route("/:id")
+  .route("/:id")  
   .put(productsController.updateProducts)
   .delete(productsController.deleteProducts);
 

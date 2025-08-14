@@ -29,10 +29,6 @@ const salesSchema = new Schema(
       min: 0.01,
       max: 1000,
     },
-    date: {
-      type: Date,
-      required: true,
-    },
   },
   {
     timestamps: true,

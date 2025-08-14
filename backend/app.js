@@ -23,7 +23,6 @@ import salesRoutes from "./src/routes/sales.js";
 
 // Creo una constante que es igual a la libreria que importé
 const app = express();
-
 //Que acepte datos en json
 app.use(express.json());
 // Para que postman guarde el token en una cookie
@@ -31,13 +30,15 @@ app.use(cookieParser());
 
 //Traemos el archivo json
 const swaggerDocument = JSON.parse(
-  fs.readFileSync(path.resolve("./documentacionMonterrosa.json"), "utf-8")
+  fs.readFileSync(path.resolve("./docu.json"), "utf-8")
 );
 
 //Mostramos el archivo al ingresar a /api/docs
 app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use("/api/products", productsRoutes);
+//campos de producctos
+//nombre, precio, descripcion, categoria, imagen, stock
 app.use("/api/customers", customersRoutes);
 app.use("/api/employee", employeeRoutes);
 app.use("/api/branches", branchesRoutes);
